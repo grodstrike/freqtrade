@@ -195,14 +195,14 @@ class Telegram(RPC):
             messages = []
             for r in results:
                 lines = [
-                    "*Trade ID:* `{trade_id}` `(since {open_date_hum})`",
-                    "*Current Pair:* {pair}",
-                    "*Amount:* `{amount} ({stake_amount} {base_currency})`",
-                    "*Open Rate:* `{open_rate:.8f}`",
-                    "*Close Rate:* `{close_rate}`" if r['close_rate'] else "",
-                    "*Current Rate:* `{current_rate:.8f}`",
-                    "*Close Profit:* `{close_profit}`" if r['close_profit'] else "",
-                    "*Current Profit:* `{current_profit:.2f}%`",
+                    "*ID сделки:* `{trade_id}` `(since {open_date_hum})`",
+                    "*Выбранная пара:* {pair}",
+                    "*Количество:* `{amount} ({stake_amount} {base_currency})`",
+                    "*Открытый рейт:* `{open_rate:.8f}`",
+                    "*Закрытый рейт:* `{close_rate}`" if r['close_rate'] else "",
+                    "*Настоящий рейт:* `{current_rate:.8f}`",
+                    "*Профит на выходе:* `{close_profit}`" if r['close_profit'] else "",
+                    "*Профит сейчас:* `{current_profit:.2f}%`",
 
                     # Adding initial stoploss only if it is different from stoploss
                     "*Initial Stoploss:* `{initial_stop_loss:.8f}` " +
